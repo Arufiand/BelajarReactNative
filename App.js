@@ -12,58 +12,40 @@ import {
   View,
   Image,
   TextInput,
-  StyleSheet
+  StyleSheet,
+  ScrollView
 } from 'react-native';
 import ROG from './img/produk1.png'
 
-const SampleBaru = () => {
-  return ( 
-    <View>
-    <View style = {
-      {
-        width: 80,
-        height: 80,
-        backgroundColor: '#48dbfb'
-      }
-    }
-    />      
-    <Text style={styles.text}> Alfian </Text>  
-    <Alfian />
-    <Text style={styles.text}> Danny </Text>  
-    <Foto />
-    <TextInput style = {
-      {
-        borderWidth: 1
-      }
-    }
+//penambahan halaman baru dan memanggil component 
+import index, {
+  Alfian, StylingBaru, SampleBaru, styles
+} from './StylingBaru';
 
-    />  
-    <BoxGreen />
-    <Hewan />
-    </View>
-  );
-}
 
 const App = () => {
   return (
      <View>
-      {/* <SampleBaru />
-      <StylingBaru /> */}
-      <ECom />
-      <ECom />
-      <ECom />
+       <ScrollView>
+        <Halamanlogin / >
+        {/* <SampleBaru />
+        <StylingBaru />
+        <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} />
+        <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {280}/ >
+        <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {320}/ > */}
+      </ScrollView>
      </View>
-
   ); 
 };
 
-const ECom = () => {
+{/* props ini digunakan untuk mengganti variabel */}
+const ECom = props => {
   return (
     <View 
     style = {{
       padding: 15, 
       backgroundColor : '#F2F2F2',
-      width : 212,
+      width : props.lebar,
       borderRadius : 8,
       margin : 20,
       }}>
@@ -76,90 +58,66 @@ const ECom = () => {
         }}
         />
       <Text style ={{fontSize : 14, fontWeight : 'bold', marginTop : 16}}>
-        ROG Terbaru 2030
+        {props.text1}
       </Text>
       <Text style ={{fontSize : 12, fontWeight : 'bold',color : '#F2994A', marginTop : 12}}>
-        Rp. Cari Sendiri Di Google
+        {props.text2}
       </Text>
       <Text style ={{fontSize : 12, fontWeight : '300', marginTop : 12}}>
-        Bukan Di Indonesia
+        {props.text3}
       </Text>
     </View>
   );
 }
 
-// penggunaan component biasa
-const Alfian = () => {
-  return <Text style={styles.text}> S1 Sistem Informasi </Text>;
-};
-
-const StylingBaru = () => {
+const Halamanlogin = () => {
   return (
-    <View>
-      <Text style={styles.text}>Styling Component</Text>
-      <View 
+    <View 
+    style = {{
+      padding: 15, 
+      backgroundColor : '#F2F2F2',
+      width : 350,
+      borderRadius : 8,
+      margin : 20,
+      }}>
+    <Text 
+    style = {{
+      fontSize : 24,
+      fontWeight : 'bold',
+      color : 'black',
+      paddingBottom : 12
+    }}>Login</Text>
+    <Text 
+    style = {VarLogin.text}> Username</Text>
+    <TextInput style ={{paddingVertical : 6}}/>
+    <Text 
+      style = {VarLogin.text}> password</Text>
+    <TextInput secureTextEntry={true} style ={{paddingVertical : 6}}/>
+    <View 
         style = {{
-          width : 100,
-          height : 100,
-          backgroundColor : '#0abde3',
-          borderWidth : 2,
-          borderColor : '#6f27cd',
-          marginTop : 20,
-          marginLeft : 20,
-        }}
-      />
+            backgroundColor: '#6FCF97', paddingVertical : 6, borderRadius : 25, marginTop : 25
+        }}>
+          <Text 
+          style = 
+            {{
+                fontSize : 18, 
+                fontWeight : '300', 
+                color : 'white', 
+                textAlign : 'center'
+            }}>
+                Login Mbut
+          </Text>
+      </View>
     </View>
   );
 }
-const Foto = () => {
-  return ( 
-    <Image source = {
-      {
-        uri: 'http://placeimg.com/100/100/arch'
-      }
-    }
-    style = {
-      {
-        width: 100,
-        height: 100
-      }
-    }
-    />
-  );
-};
 
+const VarLogin = StyleSheet.create ({
+          text :{
+            fontSize: 16,
+            fontWeight: 'bold',
+            color: 'black'
+          }
 
-//penggunaan component react
-
-class BoxGreen extends Component {
-  render(){
-    return <Text style={styles.text}>Ini Component Dari Class</Text>
-  }
-}
-
-class Hewan extends Component {
-  render(){
-    return (
-      <View>
-        <Image 
-        source= {{uri:'http://placeimg.com/100/100/animals'}}
-        style = {{width: 100, height: 100,marginLeft : 20, borderRadius: 50}}
-        />
-        <Text style = {{fontSize : 24, color : 'blue'}} >ini foto hewan</Text>
-      </View>
-    );
-  }
-}
-
-//styling basic
-const styles = StyleSheet.create ({
-  text : {
-    fontSize : 18,
-    fontWeight : 'bold',
-    color : '#10ac84',
-    marginLeft : 20,
-    marginTop : 40,
-  }
 });
-
 export default App;
