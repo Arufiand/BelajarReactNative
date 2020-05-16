@@ -6,12 +6,11 @@
  * @flow strict-local
  */
 
-import React, {Component} from 'react';
+import React from 'react';
 import {
   Text,
   View,
   Image,
-  TextInput,
   ScrollView
 } from 'react-native';
 import ROG from './img/produk1.png'
@@ -22,12 +21,16 @@ import index, {
 } from './StylingBaru';
 import Halamanlogin from './HalamanLogin';
 
+import Flexbox from './flexbox';
+
 
 const App = () => {
   return (
      <View>
        <ScrollView>
-        <Halamanlogin / >
+        <Flexbox / >
+        <Halamanlogin />
+        <Flexbox / >
         {/* <SampleBaru />
         <StylingBaru />
         <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} />

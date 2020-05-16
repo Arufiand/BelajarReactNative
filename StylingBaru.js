@@ -8,7 +8,6 @@ import {
     Image,
     TextInput,
     StyleSheet,
-    ScrollView
 } from 'react-native';
 
 export const SampleBaru = () => {
