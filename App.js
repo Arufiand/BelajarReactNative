@@ -20,22 +20,23 @@ import index, {
   Alfian, StylingBaru, SampleBaru, styles
 } from './StylingBaru';
 import Halamanlogin from './HalamanLogin';
-
 import Flexbox from './flexbox';
-
+import Position from './PositionReactNative';
 
 const App = () => {
   return (
      <View>
        <ScrollView>
-        <Flexbox / >
-        <Halamanlogin />
-        <Flexbox / >
-        {/* <SampleBaru />
-        <StylingBaru />
-        <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} />
-        <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {280}/ >
-        <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {320}/ > */}
+         
+          <Flexbox />
+          <Position />
+          {/* <Halamanlogin /> */}
+          <Flexbox />
+          {/* <SampleBaru /> */}     
+          {/* <StylingBaru /> */}
+          {/* <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} /> */}
+          {/* <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {280}/ > */}
+          {/* <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {320}/ > */}
       </ScrollView>
      </View>
   ); 

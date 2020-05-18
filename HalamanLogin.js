@@ -3,7 +3,8 @@ import {
     Text,
     View,
     TextInput,
-    StyleSheet
+    StyleSheet,
+    TouchableOpacity
 } from 'react-native';
 
 const Halamanlogin = () => {
@@ -18,18 +19,20 @@ const Halamanlogin = () => {
       }}>
     <Text 
     style = {{
-      fontSize : 24,
+      fontSize : 28,
       fontWeight : 'bold',
       color : 'black',
       paddingBottom : 12
     }}>Login</Text>
     <Text 
     style = {VarLogin.text}> Username</Text>
-    <TextInput style ={{paddingVertical : 6}}/>
+    <TextInput style ={{paddingVertical : 6}} placeholder = "isikan Username" placeholderTextColor = "black"
+    // onSubmitEditing= {()=>this.password.focus()}
+    />
     <Text 
       style = {VarLogin.text}> password</Text>
-    <TextInput secureTextEntry={true} style ={{paddingVertical : 6}}/>
-    <View 
+    <TextInput secureTextEntry={true} style ={{paddingVertical : 6}} placeholder ="isikan Password" placeholderTextColor = "black"/>
+    <TouchableOpacity 
         style = {{
             backgroundColor: '#6FCF97', paddingVertical : 6, borderRadius : 25, marginTop : 25
         }}>
@@ -43,14 +46,14 @@ const Halamanlogin = () => {
             }}>
                 Login Mbut
           </Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const VarLogin = StyleSheet.create({
     text: {
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: 'bold',
         color: 'black'
     }
