@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View,Image } from 'react-native'
-import cart from './img/cart.png';
-import pp from './img/pp.jpg'
+import cart from '../../../img/cart.png';
+import pp from '../../../img/pp.jpg'
 const Position = () => {
     return (
         <View>

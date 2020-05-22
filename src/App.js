@@ -13,14 +13,14 @@ import {
   Image,
   ScrollView
 } from 'react-native';
-import ROG from './img/produk1.png'
+import ROG from '../img/produk1.png'
 
 //penambahan halaman baru dan memanggil component 
 import index, {
   Alfian, StylingBaru, SampleBaru, styles
 } from './pages/Styling';
 import Halamanlogin from './pages/Login';
-import Flexbox from './pages/Flexbox';
+ import FlexBox from './pages/FlexBox';
 import Position from './pages/Position';
 
 const App = () => {
@@ -28,15 +28,15 @@ const App = () => {
      <View>
        <ScrollView>
          
-          <Flexbox />
+          <FlexBox />
           <Position />
           <Halamanlogin />
-          <Flexbox />
+          <FlexBox />
           {/* <SampleBaru /> */}     
-          {/* <StylingBaru /> */}
-          {/* <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} /> */}
-          {/* <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {280}/ > */}
-          {/* <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {320}/ > */}
+          <Styling />
+          <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} />
+          <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {280}/ >
+          <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {320}/ >
       </ScrollView>
      </View>
   ); 
