@@ -30,7 +30,7 @@ const App = () => {
          
           <Flexbox />
           <Position />
-          {/* <Halamanlogin /> */}
+          <Halamanlogin />
           <Flexbox />
           {/* <SampleBaru /> */}     
           {/* <StylingBaru /> */}

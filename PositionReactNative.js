@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View,Image, TouchableWithoutFeedback } from 'react-native'
+import { StyleSheet, Text, View,Image } from 'react-native'
 import cart from './img/cart.png';
 import pp from './img/pp.jpg'
 const PositionReactNative = () => {
@@ -84,6 +84,4 @@ const styles = StyleSheet.create({
         color: 'black'
     },
     fotoBunder : {width : 100, height : 100, borderRadius : 100/2 }
-    
-
 })

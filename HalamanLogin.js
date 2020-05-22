@@ -7,7 +7,11 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+
+
 const Halamanlogin = () => {
+  const [User, setUser] = React.useState('');
+  const [Pass, setPass] = React.useState('');
   return (
     <View 
     style = {{
@@ -26,12 +30,31 @@ const Halamanlogin = () => {
     }}>Login</Text>
     <Text 
     style = {VarLogin.text}> Username</Text>
-    <TextInput style ={{paddingVertical : 6}} placeholder = "isikan Username" placeholderTextColor = "black"
+    <TextInput 
+    style ={{paddingVertical : 6}} 
+    placeholder = "isikan Username" 
+    placeholderTextColor = "black"
     // onSubmitEditing= {()=>this.password.focus()}
+    onChangeText={text => {
+      setUser(text);
+      console.log(`isi user ${text}`);      
+    }}
+    value = {User}
+    
     />
     <Text 
       style = {VarLogin.text}> password</Text>
-    <TextInput secureTextEntry={true} style ={{paddingVertical : 6}} placeholder ="isikan Password" placeholderTextColor = "black"/>
+    <TextInput secureTextEntry={true} 
+    style ={{paddingVertical : 6}} 
+    placeholder ="isikan Password" 
+    placeholderTextColor = "black" 
+    onChangeText={text => {
+      setPass(text);
+      console.log(`isi user ${text}`);      
+    }}
+    value= {Pass}
+    
+    />
     <TouchableOpacity 
         style = {{
             backgroundColor: '#6FCF97', paddingVertical : 6, borderRadius : 25, marginTop : 25
