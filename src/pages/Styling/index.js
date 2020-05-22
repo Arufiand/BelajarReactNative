@@ -112,10 +112,13 @@ export const styles = StyleSheet.create({
           marginTop: 40,
       }
   });
-const index = () => {
+const Styling = () => {
     return (<View>
+      <SampleBaru />
+      <Alfian />
+      <Foto/>
 
     </View>);
 }
 
-export default index;
+export default Styling;

@@ -16,7 +16,7 @@ import {
 import ROG from '../img/produk1.png'
 
 //penambahan halaman baru dan memanggil component 
-import index, {
+import Styling, {
   Alfian, StylingBaru, SampleBaru, styles
 } from './pages/Styling';
 import Halamanlogin from './pages/Login';
@@ -32,8 +32,8 @@ const App = () => {
           <Position />
           <Halamanlogin />
           <FlexBox />
-          {/* <SampleBaru /> */}     
-          <Styling />
+          <SampleBaru />     
+          {/* <Styling /> */}
           <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} />
           <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {280}/ >
           <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {320}/ >
