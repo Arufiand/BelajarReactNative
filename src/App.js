@@ -18,10 +18,10 @@ import ROG from './img/produk1.png'
 //penambahan halaman baru dan memanggil component 
 import index, {
   Alfian, StylingBaru, SampleBaru, styles
-} from './StylingBaru';
-import Halamanlogin from './HalamanLogin';
-import Flexbox from './flexbox';
-import Position from './PositionReactNative';
+} from './pages/Styling';
+import Halamanlogin from './pages/Login';
+import Flexbox from './pages/Flexbox';
+import Position from './pages/Position';
 
 const App = () => {
   return (
