@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Text,
     View
 } from 'react-native';
 
 const Flexbox = () => {
+    // const[subscriber, setSubscriber] = useState(200);
+
+    // useEffect(()=>
+    //     {
+    //         //did mount
+    //         console.log('did mount');
+    //         setTimeout(() => {
+    //         setSubscriber(400);
+    //         },6000)
+    //         return () => {
+    //             //did update
+    //             console.log ('did update');
+    //         };
+    //     }, [subscriber]);
+
+    // useEffect(()=>
+    //     {
+    //         console.log('did update')
+    //         setTimeout(() => {
+    //             setSubscriber(400);
+    //         },2000)
+            
+    //     }, [subscriber]);
     return (
         <View>
         <View style = {{flexDirection : 'row',

@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View,Image } from 'react-native'
 import cart from '../../../img/cart.png';
 import pp from '../../../img/pp.jpg'
 const Position = () => {
+    const[subscriber, setSubscriber] = useState(200);
+
+    useEffect(()=>
+        {
+            //did mount
+            console.log('did mount');
+            setTimeout(() => {
+            setSubscriber(400);
+            },6000)
+            return () => {
+                //did update
+                console.log ('did update');
+            };
+        }, [subscriber]);
+
+    // useEffect(()=>
+    //     {
+    //         console.log('did update')
+    //         setTimeout(() => {
+    //             setSubscriber(400);
+    //         },2000)
+            
+    //     }, [subscriber]);
     return (
         <View>
         <View style = {styles.wrapper}>
@@ -29,7 +52,7 @@ const Position = () => {
             <View style={styles.cartWrapper}>
                 <Image source ={pp} style = {styles.fotoBunder}/>
                 <Text style = {styles.notifikator}>
-                10
+                {subscriber}
                 </Text>
             </View>
             <View style={{marginLeft : 10,alignContent : 'center', justifyContent : 'center'}}>
