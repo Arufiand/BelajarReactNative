@@ -20,8 +20,9 @@ import Styling, {
   Alfian, StylingBaru, SampleBaru, styles
 } from './pages/Styling';
 import Halamanlogin from './pages/Login';
- import FlexBox from './pages/FlexBox';
+import FlexBox from './pages/FlexBox';
 import Position from './pages/Position';
+import PropsDinamis from './pages/PropsDinamis';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <FlexBox />
           <Position />
           <Halamanlogin />
+          <PropsDinamis />
           <FlexBox />
           <SampleBaru />     
           {/* <Styling /> */}
