@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View,Image } from 'react-native'
 import cart from '../../../img/cart.png';
-import pp from '../../../img/pp.jpg'
+import pp from '../../../img/pp.jpg';
+
 const Position = () => {
     const[subscriber, setSubscriber] = useState(200);
 
     useEffect(()=>
         {
             //did mount
-            console.log('did mount');
+            console.log('did mount Position');
             setTimeout(() => {
             setSubscriber(400);
             },6000)
             return () => {
                 //did update
-                console.log ('did update');
+                console.log ('did update Position');
             };
         }, [subscriber]);
 

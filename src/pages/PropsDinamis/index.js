@@ -16,7 +16,7 @@ const Story = props => {
     );
 }
 
-const index = () => {
+const PropsDinamis = () => {
     return (
         <ScrollView horizontal>
             <View style={{ flexDirection: "row" }} >
@@ -31,7 +31,7 @@ const index = () => {
     )
 }
 
-export default index
+export default PropsDinamis
 
 const styles = StyleSheet.create({})
 

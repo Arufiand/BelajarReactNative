@@ -23,6 +23,7 @@ import Halamanlogin from './pages/Login';
 import FlexBox from './pages/FlexBox';
 import Position from './pages/Position';
 import PropsDinamis from './pages/PropsDinamis';
+import StateDinamis from './pages/StateDinamis';
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" lebar = {250} />
           <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {280}/ >
           <ECom text1 = "ASUS 2020" text2 = "Rp2000000" text3 = "Dijual di ID" lebar = {320}/ >
+          <StateDinamis />
       </ScrollView>
      </View>
   ); 
