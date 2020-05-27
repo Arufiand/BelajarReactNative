@@ -19,7 +19,7 @@ const ECom = (props) => {
             <Text style={styleP.textProduct}>
                 {props.text3}
             </Text>
-            <TouchableOpacity onPress={() => props.onButtonPress}>
+            <TouchableOpacity onPress={props.onPressCom}>
                 <View style={styleP.buttonWrapper}>
                     <Text style={styleP.buttonText}>BELI</Text>
                 </View>
@@ -28,21 +28,19 @@ const ECom = (props) => {
     );
 }
 
-const Product = () => {
+const Product = (props) => {
     return (
         <View>
-            <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" onPress = {() => {onButtonPress}}/>
+            <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" onPressCom = {props.onButtonPress}/>
+            <ECom text1="ASUS 2021" text2="Rp2000000" text3="Dijual di ID" onPressCom = {props.onButtonPress}/>
+            <ECom text1="ASUS 2020" text2="Rp2000000" text3="Dijual di ID" onPressCom = {props.onButtonPress}/>
         </View>
     )
 }
 
-
-
 export default Product
 
 {/* props ini digunakan untuk mengganti variabel */ }
-
-
 
 const styleP = StyleSheet.create({
     Product : {width: 188,height: 107,borderRadius: 8,},
