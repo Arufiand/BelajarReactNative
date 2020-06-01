@@ -17,6 +17,7 @@ import Position from './pages/Position';
 import PropsDinamis from './pages/PropsDinamis';
 import StateDinamis from './pages/StateDinamis';
 import Komunikasi from './pages/Komunikasi';
+import CustomHooks from './pages/CustomHooks';
 
 const App = () => {
   return (
@@ -26,12 +27,14 @@ const App = () => {
           <FlexBox />
           <Position />
           <Halamanlogin />
-          <PropsDinamis />
+          {/* <PropsDinamis /> */}
+          <CustomHooks />
           <FlexBox />
           {/* <SampleBaru />      */}
           {/* <Styling /> */}
-          <StateDinamis />
-          <Komunikasi />
+          {/* <StateDinamis /> */}
+          {/* <Komunikasi /> */}
+
       </ScrollView>
      </View>
   ); 
